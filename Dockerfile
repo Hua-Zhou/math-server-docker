@@ -495,6 +495,15 @@ RUN cd libs && source ./libs_R.sh
 
 RUN cd libs && source ./install_JSAnimation.sh
 
+# Graphviz
+RUN wget https://graphviz.gitlab.io/pub/graphviz/stable/SOURCES/graphviz.tar.gz \
+	&& tar xf graphviz.tar.gz \
+	&& cd graphviz-2.40.1 \
+	&& ./configure \
+	&& make -j4 \
+	&& make install \
+	&& cd .. && rm -rf graphviz-2.40.1
+
 ####################
 ## Services
 ####################
