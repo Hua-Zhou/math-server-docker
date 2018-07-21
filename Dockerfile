@@ -477,6 +477,15 @@ RUN cd libs && source ./libs_R.sh
 
 RUN cd libs && source ./install_JSAnimation.sh
 
+RUN cd libs && julia libs_julia.jl
+
+####################
+## Setup user accounts
+####################
+
+ADD setup_accounts.sh setup_accounts.sh
+RUN source ./setup_accounts.sh
+
 ####################
 ## Services
 ####################
