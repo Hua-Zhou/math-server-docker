@@ -11,8 +11,6 @@
 
 FROM centos:7
 
-MAINTAINER felipenoris <felipenoris@users.noreply.github.com>
-
 WORKDIR /root
 
 RUN yum update -y && yum install -y epel-release && yum clean all
