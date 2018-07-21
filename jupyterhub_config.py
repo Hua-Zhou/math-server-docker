@@ -9,3 +9,7 @@ c.Spawner.env_keep = [ 'PATH', 'LD_LIBRARY_PATH', 'JAVA_HOME', 'CPATH', 'CMAKE_R
 #c.Authenticator.admin_users = set(['admin'])
 
 c.JupyterHub.extra_log_file = '/var/log/jupyterhub.log'
+
+# Change the user’s default user interface to JupyterLab
+# c.Spawner.default_url = '/tree' # Jupyter Notebook interface
+c.Spawner.default_url = '/lab' # JupyterLab interface
