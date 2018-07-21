@@ -464,18 +464,19 @@ RUN conda install altair --channel conda-forge -y
 # Plotly for Python
 RUN conda install plotly -y
 
-ADD libs libs
+# Install Python packages
+ADD libs_python libs_python
+RUN cd libs_python && source ./libs_python2.sh
+RUN cd libs_python && source ./libs_python3.sh
+RUN cd libs_python && source ./install_JSAnimation.sh
 
-# Install packages
-RUN cd libs && source ./libs_python2.sh
+# Install R packages
+ADD libs_r libs_r
+RUN cd libs_r && source ./libs_R.sh
 
-RUN cd libs && source ./libs_python3.sh
-
-RUN cd libs && source ./libs_R.sh
-
-RUN cd libs && source ./install_JSAnimation.sh
-
-RUN cd libs && julia libs_julia.jl
+# Install Julia packages
+ADD libs_julia libs_julia
+RUN cd libs_julia && julia libs_julia.jl
 
 ####################
 ## Setup user accounts
