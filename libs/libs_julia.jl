@@ -6,6 +6,7 @@ for l in libs
     Pkg.add(l)
 end
 
+Pkg.clone("https://github.com/OpenMendel/Search.jl.git")
 Pkg.clone("https://github.com/OpenMendel/MendelBase.jl.git")
 Pkg.clone("https://github.com/OpenMendel/MendelGWAS.jl.git")
 Pkg.clone("https://github.com/OpenMendel/MendelKinship.jl.git")
