@@ -1,8 +1,6 @@
 BenchmarkTools
 BufferedStreams
 Calculus
-Cbc
-Clp
 SCS
 Convex
 Coverage
@@ -27,7 +25,6 @@ GZip
 HDF5
 HttpParser
 HttpServer
-InterestRates
 Ipopt
 IterativeSolvers
 JavaCall
