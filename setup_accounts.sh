@@ -7,6 +7,8 @@ for u in "${ulist[@]}"
     echo -e "jsmce18c\njsmce18c" | passwd "$u" 
     chsh -s /bin/bash "$u"
     echo "precompile Julia packages"
-    su - "$u" -c 'julia -e compilepkgs.jl'
+    cp compilepkgs.jl "/home/$u"
+    su - "$u" -c 'julia compilepkgs.jl'
+    su - "$u" -c 'rm compilepkgs.jl'
   done
   
