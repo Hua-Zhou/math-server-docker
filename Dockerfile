@@ -483,6 +483,7 @@ RUN cd libs_julia && julia libs_julia.jl
 ####################
 
 ADD setup_accounts.sh setup_accounts.sh
+ADD compilepkgs.jl compilepkgs.jl
 RUN source ./setup_accounts.sh
 
 ####################
