@@ -8,6 +8,7 @@ end
 
 Pkg.clone("https://github.com/OpenMendel/Search.jl.git")
 Pkg.clone("https://github.com/OpenMendel/SnpArrays.jl.git")
+Pkg.clone("https://github.com/OpenMendel/VCFTools.jl.git")
 Pkg.clone("https://github.com/OpenMendel/VarianceComponentModels.jl.git")
 Pkg.clone("https://github.com/OpenMendel/MendelBase.jl.git")
 Pkg.clone("https://github.com/OpenMendel/MendelGWAS.jl.git")

@@ -1,9 +1,14 @@
 function recompile_packages()
     for pkg in ["BenchmarkTools", "SCS", "Convex", "CSV", "DataFrames", 
-        "Distributions", "GLM", "GR", "HDF5", "Ipopt", "IterativeSolvers", 
+        "Distributions", "FFTW", "GeneticVariation", "GLM", "GR", 
+        "HDF5", "HypothesisTests", 
+        "ImageMagick", "Images", "Ipopt", "IterativeSolvers", 
         "JuliaDB", "JuMP", "LinearMaps", "MathProgBase", "MendelBase", 
-        "MendelGWAS", "MendelKinship", "MixedModels", "Plots", "Plotly", 
-        "PlotlyJS", "PyCall", "RCall", "SnpArrays"]
+        "MendelGWAS", "MendelKinship", "MixedModels", "NullableArrays", 
+        "Plots", "Plotly", "PlotlyJS", 
+        "Gadfly", # need to be after Plotly to successfully compile
+        "ProgressMeter",
+        "PyCall", "RCall", "SnpArrays", "VCFTools"]
         try
             info("Compiling: $pkg")
             eval(Expr(:toplevel, Expr(:using, Symbol(pkg))))

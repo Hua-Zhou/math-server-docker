@@ -40,6 +40,7 @@ pkgs <- c(
 	"ggthemes",
 	"gmp",
 	"Hmisc",
+	"kinship2",
 	"knitr",
 	"leaps",
 	"linprog",
